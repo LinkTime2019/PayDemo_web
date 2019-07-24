@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>open pandax</title>
+</head>
+
+<body>
+    <!-- 安卓 -->
+    <!--   
+        token:转账的支付的代币类型;
+        adress:收款地址;
+        amountmoney:转账的数额;
+        access_token:授权码;
+    -->
+    <a href='pandax://thirdpay/param={"token":"ETH","adress":"0x8F089820B5F9Ca5eC7867A6Ea190D5a462Da06ae","amountmoney":"1","access_token":""}'>打开安卓app</a>
+    <br />
+    <!-- iPhone -->
+    <a class="iphone">打开苹果app</a>
+    <script type="text/javascript">
+    /*
+     * address:收款地址;
+     * token:转账的支付的代币类型;
+     * access_token:授权码;
+     * amountMoney:转账的数额;
+     * appName:app名称,该名称用于支付结束返回提示框的显示;
+     * URLScheme:URLScheme,用于支付结束返回调用方app;
+     */
+    let encodedData = window.btoa('{"token":"ETH","address":"0x8F089820B5F9Ca5eC7867A6Ea190D5a462Da06ae","amountMoney":"1","access_token":""}')
+    let node = document.getElementsByClassName('iphone');
+    node[0].setAttribute("href", "pandax://" + encodedData);
+    </script>
+</body>
+
+</html>
