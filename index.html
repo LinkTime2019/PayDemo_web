@@ -28,7 +28,9 @@
      * appName:app名称,该名称用于支付结束返回提示框的显示;
      * URLScheme:URLScheme,用于支付结束返回调用方app;
      */
+    // iPhone的传值需要转base64
     const encoded_data = window.btoa('{"token":"ETH","address":"0x8F089820B5F9Ca5eC7867A6Ea190D5a462Da06ae","amountMoney":"1","access_token":""}')
+    
     const iphone_app_link = "pandax://" + encoded_data
     const iphone_download_link = "https://itunes.apple.com/app/id1367025446"
 
